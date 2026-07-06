@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode */
+@variant dark (&:where(.dark, .dark *));
+
+/* ─────────────────────────────────────────────
+   INDIAN TRICOLOR CUSTOM PROPERTIES
+   Saffron #FF9933 | White #F5F5F0 | Green #138808 | Navy #06038D
+   ───────────────────────────────────────────── */
+:root {
+  --saffron: #FF9933;
+  --saffron-light: #FFF3E0;
+  --saffron-dark: #E65C00;
+  --india-green: #138808;
+  --india-green-light: #E8F5E9;
+  --india-green-dark: #0A5704;
+  --navy: #06038D;
+  --navy-light: #E8EAF6;
+  --ashoka-blue: #0033CC;
+  --cream: #FFFDE7;
+  --sand: #FFF8E1;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-200 antialiased;
+    font-family: 'Noto Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   INDIAN TRICOLOR GRADIENT HEADER ACCENT
+   ───────────────────────────────────────────── */
+.tricolor-bar {
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    #FF9933 0%, #FF9933 33.3%,
+    #ffffff 33.3%, #ffffff 66.6%,
+    #138808 66.6%, #138808 100%
+  );
+  width: 100%;
+}
+
+.tricolor-bar-dark {
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    #FF9933 0%, #FF9933 33.3%,
+    #374151 33.3%, #374151 66.6%,
+    #138808 66.6%, #138808 100%
+  );
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────────
+   SAFFRON ACCENT GLOW
+   ───────────────────────────────────────────── */
+.saffron-glow {
+  box-shadow: 0 0 18px rgba(255, 153, 51, 0.25);
+}
+
+/* ─────────────────────────────────────────────
+   INDIA FLAG BADGE
+   ───────────────────────────────────────────── */
+.flag-badge {
+  background: linear-gradient(135deg, #FF9933 0%, #FF9933 33%, #fff 33%, #fff 66%, #138808 66%, #138808 100%);
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.1);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────────
+   KISAN CARD PATTERN BACKGROUND
+   ───────────────────────────────────────────── */
+.kisan-pattern {
+  background-image:
+    radial-gradient(circle at 20px 20px, rgba(255,153,51,0.04) 1px, transparent 0),
+    radial-gradient(circle at 60px 60px, rgba(19,136,8,0.04) 1px, transparent 0);
+  background-size: 80px 80px;
+}
+
+/* ─────────────────────────────────────────────
+   SCHEME CARD HOVER LIFT
+   ───────────────────────────────────────────── */
+.scheme-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.scheme-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.dark .scheme-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+/* ─────────────────────────────────────────────
+   CUSTOM SCROLLBAR
+   ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-200 dark:bg-zinc-800 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-orange-300 dark:bg-orange-900/60;
+}
+
+/* ─────────────────────────────────────────────
+   FADE-IN ANIMATION
+   ───────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.dark .glass {
+  background: rgba(12,12,15,0.72);
+}
