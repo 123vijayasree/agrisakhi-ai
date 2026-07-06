@@ -6,7 +6,7 @@
 
 ## 📌 Project Overview
 
-**AgriSakhi AI** (कृषि सखी) is an AI-powered agricultural advisory web application designed specifically for Indian farmers. It bridges the gap between traditional farming knowledge and modern technology by providing real-time crop disease diagnosis, weather intelligence, market pricing, soil health analysis, and AI-powered consultation — all in multiple Indian regional languages.
+**AgriSakhi AI** is an AI-powered agricultural advisory web application designed specifically for Indian farmers. It bridges the gap between traditional farming knowledge and modern technology by providing real-time crop disease diagnosis, weather intelligence, market pricing, soil health analysis, and AI-powered consultation — all in multiple Indian regional languages.
 
 The application is built as a **Progressive Web App (PWA)** using React 19 + Vite, styled with Tailwind CSS v4, and powered by Google's Gemini AI for intelligent conversational and diagnostic capabilities.
 
