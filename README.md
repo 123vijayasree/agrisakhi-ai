@@ -1,4 +1,4 @@
-# 🌱 AgriSakhi AI (कृषि सखी)
+# 🌱 AgriSakhi AI 
 
 > **Empowering Indian Farmers with Intelligent, Localization-First Agricultural Insights.**
 
